@@ -1,5 +1,5 @@
 from os import system
-git clone https://github.com/kaal0408/Heaven-Userbot && cd Heaven-Userbot && python3 -m main.py
+git clone https://github.com/kaal0408/Heaven-Userbot && cd Heaven-Userbot && python3 main.py
 print("Hey user i am sorry but you have got some error!\nMaybe you have enter Wrong details check details First\nPLEASE COME TO SUPPORT IF YOU DONT KNOW ERROR!!!\nSUPPORT LINK:")
 
 
