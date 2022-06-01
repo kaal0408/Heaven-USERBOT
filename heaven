@@ -1,4 +1,8 @@
-git clone https://github.com/kaal0408/HEAVEN-USERBOT heaven
-cd heaven
+from os import system
+
+system("git clone https://github.com/kaal0408/Heaven-Userbot && cd Heaven-Userbot && python3 -m main.py")
+print("Hey user i am sorry but you have got some error!\nMaybe you have enter Wrong details check details First\nPLEASE COME TO SUPPORT IF YOU DONT KNOW ERROR!!!\nSUPPORT LINK:")
+
+
 pip3 install -U -r requirements.txt
 python3 main.py
