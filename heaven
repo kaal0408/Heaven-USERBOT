@@ -1,4 +1,4 @@
-git clone https://github.com/kaal0408/HEAVEN-USERBOT Zaid
-cd Zaid
+git clone https://github.com/kaal0408/HEAVEN-USERBOT heaven
+cd Heaven
 pip3 install -U -r requirements.txt
 python3 main.py
