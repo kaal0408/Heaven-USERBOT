@@ -33,7 +33,7 @@
             "required": false
         },
         "LOG_GROUP": {
-            "description": "Enter There group/ channel id where fbans etc stuffs logs ( Add @Zaid2_Robot and type /id, if channel then forward a message to @Zaid2_Robot.)",
+            "description": "Enter There group/ channel id where fbans etc stuffs logs ( Add @Pikachu_x_bot and type /id, if channel then forward a message to @Pikachu_x_bot.)",
             "required": false
         },
         "SUDO_USERS": {
