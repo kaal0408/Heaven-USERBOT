@@ -7,6 +7,7 @@ import re
 import asyncio
 from datetime import datetime
 from config import *
+from config import SUDO_USERS
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
@@ -16,9 +17,8 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 API_ID = API_ID
 API_HASH = API_HASH 
 LOG_GROUP = LOG_GROUP
-SUDO_USERS = SUDO_USERS
 DB_URL = DB_URL
-
+SUDOERS = config.SUDO_USERS
 
 if not STRING_SESSION1:
     logging.error("No String Session Found! Exiting!")
