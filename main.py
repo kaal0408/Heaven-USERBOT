@@ -6,6 +6,7 @@ import os
 import re
 import asyncio
 from datetime import datetime
+from config import config
 from config import *
 from config import SUDO_USERS
 
