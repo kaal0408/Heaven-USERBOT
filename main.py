@@ -18,10 +18,10 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
-API_ID = API_ID
-API_HASH = API_HASH 
-LOG_GROUP = LOG_GROUP
-DB_URL = DB_URL
+API_ID = config.API_ID
+API_HASH = config.API_HASH 
+LOG_GROUP = config.LOG_GROUP
+DB_URL = config.DB_URL
 SUDOERS = config.SUDO_USERS
 
 if not STRING_SESSION1:
