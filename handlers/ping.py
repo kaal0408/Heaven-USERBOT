@@ -12,7 +12,7 @@ async def _(event):
     await event.edit("pong")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit("""
+    await event.edit("
 ╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱
 ┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱
 ┃╰━╯┃╭━━╮╭━━╮╭━━╮
