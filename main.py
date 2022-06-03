@@ -29,10 +29,6 @@ SUDOERS = config.SUDO_USERS
 ALIVE_PIC = config.ALIVE_IMG
 MONGO_DB = config.MONGO_DB
 STRING_SESSION1 = config.STRING_SESSION1
-STRING_SESSION2 = config.STRING_SESSION2
-STRING_SESSION3 = config.STRING_SESSION3
-STRING_SESSION4 = config.STRING_SESSION4
-STRING_SESSION5 = config.STRING_SESSION5
 if not STRING_SESSION1:
     logging.error("No String Session Found! Exiting!")
     quit(1)
@@ -66,29 +62,6 @@ if STRING_SESSION1:
 else:
     bot1 = None
 
-if STRING_SESSION2:
-    bot2 = Client(session_name= STRING_SESSION2, api_id = API_ID, api_hash = API_HASH , plugins=dict(root="handlers"))
-else:
-    bot2 = None
-
-if STRING_SESSION3:
-    bot3 = Client(session_name= STRING_SESSION3, api_id = API_ID, api_hash = API_HASH , plugins=dict(root="handlers"))
-else:
-    bot3 = None
-
-if STRING_SESSION4:
-    bot4 = Client(session_name= STRING_SESSION4, api_id = API_ID, api_hash = API_HASH , plugins=dict(root="handlers"))
-else:
-    bot4 = None
-
-if STRING_SESSION5:
-    bot5 = Client(session_name= STRING_SESSION5, api_id = API_ID, api_hash = API_HASH , plugins=dict(root="handlers"))
-else:
-    bot5 = None
-
-
-
-
 
 scheduler = AsyncIOScheduler()
 CMD_HELP = {}
@@ -97,18 +70,6 @@ START_TIME = datetime.now()
 if bot1:
     bot1.start()
     bot1.join_chat("Murat_30_God")
-if bot2:
-    bot2.start()
-    bot2.join_chat("Murat_30_God")
-if bot3:
-    bot3.start()
-    bot3.join_chat("Murat_30_God")
-if bot4:
-    bot4.start()
-    bot4.join_chat("Murat_30_God")
-if bot5:
-    bot5.start()
-    bot5.join_chat("Murat_30_God")
 
 idle()
 
