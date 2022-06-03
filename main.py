@@ -23,7 +23,11 @@ API_HASH = config.API_HASH
 LOG_GROUP = config.LOG_GROUP
 DB_URL = config.DB_URL
 SUDOERS = config.SUDO_USERS
-
+STRING_SESSION1 = config.STRING_SESSION1
+STRING_SESSION2 = config.STRING_SESSION2
+STRING_SESSION3 = config.STRING_SESSION3
+STRING_SESSION4 = config.STRING_SESSION4
+STRING_SESSION5 = config.STRING_SESSION5
 if not STRING_SESSION1:
     logging.error("No String Session Found! Exiting!")
     quit(1)
@@ -37,12 +41,12 @@ if not API_HASH:
     quit(1)
 
 if ALIVE_IMG:
-    ALIVE_PIC = ALIVE_IMG
+    ALIVE_PIC = config.ALIVE_IMG
 else: 
     ALIVE_PIC = 'https://telegra.ph/file/acd5abe21655b9576a279.jpg'
 
 if MONGO_DB:
-    MONGO_DB = MONGO_DB
+    MONGO_DB = config.MONGO_DB
 else: 
     MONGO_DB = "mongodb+srv://mabma:BlackMamba@cluster0.ok5je.mongodb.net/?retryWrites=true&w=majority"
 
