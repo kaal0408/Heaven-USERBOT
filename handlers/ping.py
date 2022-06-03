@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from pyrogram import Client
 
 @command(pattern="^.ping")
 async def _(event):
