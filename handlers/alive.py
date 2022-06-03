@@ -14,14 +14,6 @@ async def alive(client: Client, e: Message):
             ids += 1
         if bot1:
             ids += 1
-        if bot2:
-            ids += 1
-        if bot3:
-            ids += 1
-        if bot4:
-            ids += 1
-        if bot5:
-            ids += 1
         Alive_msg = f"нεαvεη υsεявσт ιs αℓιvε 🔥 \n\n"
         Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
         Alive_msg += f"► vεяsιση : `Beta.0.1` \n"
