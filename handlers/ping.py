@@ -5,14 +5,8 @@ from main import *
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 @Client.on_message(filters.command(["ping", "Ping"], [".", "!"]) & filters.user(SUDOERS))
-async def _(event):
-    if event.fwd_from:
-        return
-    start = datetime.now()
-    await Client.edit("pong")
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    await Client.edit("
+async def ping(_, message: Message):
+    await message.reply_text(f"⭐ **
 ╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱
 ┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱
 ┃╰━╯┃╭━━╮╭━━╮╭━━╮
@@ -20,5 +14,8 @@ async def _(event):
 ┃┃╱╱╱┃╰╯┃┃┃┃┃┃╰╯┃
 ╰╯╱╱╱╰━━╯╰╯╰╯╰━╮┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
-╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯\n\n
-   MY MS → `{ms}`\n  !\n{}".format(ms))
+╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯\n\n   ** ⭐\n`{await pytgcalls.ping} ms`")
+
+
+
+  # MY MS → `{ms}`\n  !\n{}".format(ms))
