@@ -9,7 +9,10 @@ from datetime import datetime
 from config import config
 from config import *
 "from config import SUDO_USERS"
-
+"from config import API_ID"
+"from config import API_HASH"
+"from config import LOG_GROUP"
+"from config import DB_URL"
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
