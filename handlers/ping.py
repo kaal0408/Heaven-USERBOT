@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 @Client.on_message(filters.command(["ping", "Ping"], [".", "!"]) & filters.user(SUDOERS))
 async def ping(_, message: Message):
-    await message.reply_text(f"⭐ **
+    await message.reply_text(f"""⭐ **
 ╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱
 ┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱
 ┃╰━╯┃╭━━╮╭━━╮╭━━╮
@@ -14,7 +14,7 @@ async def ping(_, message: Message):
 ┃┃╱╱╱┃╰╯┃┃┃┃┃┃╰╯┃
 ╰╯╱╱╱╰━━╯╰╯╰╯╰━╮┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
-╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯\n\n   ** ⭐\n`{await pytgcalls.ping} ms`")
+╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯\n\n   ** ⭐\n`{await pytgcalls.ping} ms`""")
 
 
 
