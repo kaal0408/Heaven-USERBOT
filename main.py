@@ -8,7 +8,7 @@ import asyncio
 from datetime import datetime
 from config import config
 from config import *
-from config import SUDO_USERS
+"from config import SUDO_USERS"
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
