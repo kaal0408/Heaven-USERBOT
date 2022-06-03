@@ -13,6 +13,9 @@ from config import *
 "from config import API_HASH"
 "from config import LOG_GROUP"
 "from config import DB_URL"
+"from config import ALIVE_IMG"
+"from config import MONGO_DB"
+
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
@@ -23,6 +26,8 @@ API_HASH = config.API_HASH
 LOG_GROUP = config.LOG_GROUP
 DB_URL = config.DB_URL
 SUDOERS = config.SUDO_USERS
+ALIVE_PIC = config.ALIVE_IMG
+MONGO_DB = config.MONGO_DB
 STRING_SESSION1 = config.STRING_SESSION1
 STRING_SESSION2 = config.STRING_SESSION2
 STRING_SESSION3 = config.STRING_SESSION3
