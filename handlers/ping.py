@@ -14,8 +14,8 @@ async def ping(_, message: Message):
 ┃┃╱╱╱┃╰╯┃┃┃┃┃┃╰╯┃
 ╰╯╱╱╱╰━━╯╰╯╰╯╰━╮┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
-╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯\n\n   ** ⭐\n`{await pytgcalls.ping} ms`""")
+╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯\n\n   ** ⭐\n`MY MS → `{ms}`\n  !\n{}".format(ms)""")
 
 
 
-  # MY MS → `{ms}`\n  !\n{}".format(ms))
+  # 
