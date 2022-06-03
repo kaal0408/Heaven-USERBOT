@@ -45,7 +45,7 @@ if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1)
 
-if ALIVE_IMG:
+if ALIVE_PIC:
     ALIVE_PIC = config.ALIVE_IMG
 else: 
     ALIVE_PIC = 'https://telegra.ph/file/acd5abe21655b9576a279.jpg'
