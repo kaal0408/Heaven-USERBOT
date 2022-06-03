@@ -19,8 +19,4 @@ class config(object):
    ALIVE_IMG = getenv("ALIVE_IMG", "")
    DB_URL = getenv("DATABASE_URL", "")
    STRING_SESSION1 = getenv("STRING_SESSION1", "")
-   STRING_SESSION2 = getenv("STRING_SESSION2", "")
-   STRING_SESSION3 = getenv("STRING_SESSION3", "")
-   STRING_SESSION4 = getenv("STRING_SESSION4", "")
-   STRING_SESSION5 = getenv("STRING_SESSION5", "")
-
+   
