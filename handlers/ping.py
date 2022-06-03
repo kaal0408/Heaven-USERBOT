@@ -20,5 +20,6 @@ async def ping(_, message: Message):
 ** ⭐MY MS → `{ms}`\n """)
 
 
-
+#credit goes to astro userbot
+#made by Loverboyxd
  
