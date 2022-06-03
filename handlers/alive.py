@@ -6,8 +6,7 @@ from pyrogram import Client
 from main import ALIVE_PIC
  
 
-@Client.on_message(filters.command(["alive", "awake"], [".", "!"]) &  filters.me
-& ~filters.forwarded
+@Client.on_message(filters.command(["alive", "awake"], [".", "!"]) & ~filters.forwarded
 & ~filters.edited
 & ~filters.via_bot )
 async def alive(client: Client, e: Message):
