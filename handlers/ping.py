@@ -15,7 +15,7 @@ async def ping(_, message: Message):
 ╰╯╱╱╱╰━━╯╰╯╰╯╰━╮┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
-** ⭐"MY MS → `{ms}`\n  !\n{}".format(ms)""")
+** ⭐MY MS → `{ms}`\n """)
 
 
 
