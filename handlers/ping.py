@@ -3,7 +3,7 @@ from pyrogram import Client
 from pyrogram import filters
 from main import *
 
-@command(pattern="^.ping")
+@Client.on_message(filters.command(["ping", "Ping"], [".", "!"]) & filters.user(SUDOERS))
 async def _(event):
     if event.fwd_from:
         return
