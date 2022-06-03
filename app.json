@@ -7,22 +7,6 @@
         "STRING_SESSION1": {
             "description": "pyrogram string session here",
             "required": true
-        },
-        "STRING_SESSION2": {
-            "description": "pyrogram string session here",
-            "required": false
-        },
-        "STRING_SESSION3": {
-            "description": "pyrogram string session here",
-            "required": false
-        },
-        "STRING_SESSION4": {
-            "description": "pyrogram string session here",
-            "required": false
-        },
-        "STRING_SESSION5": {
-            "description": "pyrogram string session here",
-            "required": false
         }, 
         "API_ID": {
             "description": "telegram api id here",
