@@ -44,7 +44,7 @@ async def alive(client: Client, e: Message):
         ),
     ) 
     except Exception as lol:         
-        Alive_msg = f"zαι∂ υsεявσт ιs αℓιvε🔥 \n\n"
+        Alive_msg = f"нεαvεη υsεявσт ιs αℓιvε🔥 \n\n"
         Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
         Alive_msg += f"► vεяsιση : `Beta.0.1` \n"
         Alive_msg += f"► ρүяσ vεяsιση : `1.4.15` \n"
