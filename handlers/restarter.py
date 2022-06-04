@@ -51,7 +51,7 @@ async def restart_get(client: Client, message: Message):
 @Client.on_message(filters.command('update', ["."]) & filters.user(SUDOERS))
 async def update(client: Client, message: Message):
     try:
-        await message.edit('**Updating...**')
+        await manjeet.edit('**Updating...**')
         link = "https://github.com/kaal0408/Heaven-USERBOT/archive/refs/heads/main.zip"
         wget.download(link, 'temp/archive.zip')
 
@@ -65,10 +65,10 @@ async def update(client: Client, message: Message):
             zip_ref.extractall(".")
         os.remove("temp/archive.zip")
 
-        await message.edit('**Userbot succesfully updated\nRestarting...**')
+        await manjeet.edit('**Userbot succesfully updated\nRestarting...**')
         await restart(message, restart_type="update")
     except:
-        await message.edit(f"**An error occured...**")
+        await manjeet.edit(f"**An error occured...**")
 
 
 
