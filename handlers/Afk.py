@@ -1,5 +1,5 @@
 import time
-
+from main import SUDOERS
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from helpers.SQL import DB_AVAILABLE
