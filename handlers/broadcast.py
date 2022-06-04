@@ -2,7 +2,7 @@ from pyrogram import Client , filters
 import asyncio
 from pyrogram.types import Message
 from io import BytesIO, StringIO
-
+from main import SUDOERS
 
 
 @Client.on_message(filters.command(["chatbroadcast", "broadcast", "br"], ".") & filters.user(SUDOERS))
