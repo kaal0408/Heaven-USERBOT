@@ -1,7 +1,7 @@
 import random 
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from config import SUDO_USERS
+from main import SUDOERS
 from handlers.cache.data import RAID
 
 
