@@ -1,5 +1,5 @@
 import html
-
+from main import SUDOERS
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
