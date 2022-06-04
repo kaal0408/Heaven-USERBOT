@@ -6,12 +6,12 @@ from pyrogram.types import Message, ChatPermissions
 
 from helpers.PyroHelpers import GetUserMentionable
 from helpers.adminHelpers import CheckAdmin, CheckReplyAdmin, RestrictFailed
-from handlers.help import add_command_help
 
 
 
 
-@Client.on_message(filters.command("kick", ".") & filters.me)
+
+@Client.on_message(filters.command("kick", ".") & filters.user(SUDOERS))
 async def kick_user(bot: Client, message: Message):
     if await CheckReplyAdmin(message) and await CheckAdmin(message):
         try:
@@ -27,13 +27,4 @@ async def kick_user(bot: Client, message: Message):
             await RestrictFailed(message)
 
 
-add_command_help(
-    "ban",
-    [
-        [".ban", "Bans user for specified hours or indefinitely."],
-        [".unban", "Unbans the user."],
-        [".mute", "Bans user for specified hours or indefinitely."],
-        [".unmute", "Unmutes the user."],
-        [".kick", "Kicks the user out of the group."],
-    ],
-)
+
