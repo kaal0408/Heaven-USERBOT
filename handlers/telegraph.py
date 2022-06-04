@@ -3,9 +3,9 @@ from telegraph import upload_file
 
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from handlers.help import *
+from main import SUDOERS
 
-@Client.on_message(filters.command(["tm", "tgm", "telegraph"], ".") & filters.me) 
+@Client.on_message(filters.command(["tm", "tgm", "telegraph"], ".") & filters.user(SUDOERS)) 
 async def telegraph(client: Client, message: Message):
     replied = message.reply_to_message
     if not replied:
@@ -44,9 +44,4 @@ async def telegraph(client: Client, message: Message):
         os.remove(download_location)
 
 
-add_command_help(
-    "www",
-    [
-        [".tm", "Reply to Media as args to upload it to telegraph."],
-    ],
-)
+
