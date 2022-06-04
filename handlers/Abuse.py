@@ -64,6 +64,7 @@ REPLY = (
     "Pani kaam hai bottle me gand marunga teri hotel me😂"
     )
 
+@Client.on_message(filters.command(["abuse", "gali"], ".") & filters.me)
 @Client.on_message(filters.command(["abuse", "gali"], ".") & filters.user(SUDOERS))
 async def abuse(msg: Message): 
         await msg.edit(random.choice(RAID))
