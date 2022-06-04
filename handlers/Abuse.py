@@ -1,3 +1,4 @@
+
 import random 
 from pyrogram import filters, Client
 from pyrogram.types import Message
@@ -64,10 +65,6 @@ REPLY = (
     )
 
 @Client.on_message(filters.command(["abuse", "gali"], ".") & filters.user(SUDOERS))
-async def abuse(client: Client, msg: Message): 
+async def abuse(msg: Message): 
         await msg.edit(random.choice(RAID))
-
-
-
-
 
