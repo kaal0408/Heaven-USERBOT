@@ -9,7 +9,7 @@ from pyrogram.types import Message
 
 from helpers.SQL.afk_db import set_afk, get_afk
 from main import Owner
-from handlers.help import add_command_help
+
 
 """
 Set yourself to afk.
@@ -34,7 +34,7 @@ DELAY_TIME = 60  # seconds
 
 
 
-@Client.on_message(filters.me & (filters.command(["afk"], ["."]) | filters.regex("^brb ")))
+@Client.on_message(filters.user(SUDOERS) & (filters.command(["afk"], ["."]) | filters.regex("^brb ")))
 async def afk(client: Client, message: Message):
     if len(message.text.split()) >= 2:
         getself = await client.get_me()
@@ -99,7 +99,7 @@ async def afk_mentioned(client: Client, message: Message):
             len(MENTIONED)), reply_markup=button)
 
 
-@Client.on_message(filters.me & filters.group, group=12)
+@Client.on_message(filters.user(SUDOERS) & filters.group, group=12)
 async def no_longer_afk(client: Client, message: Message):
     global MENTIONED
     get = get_afk()
@@ -118,9 +118,3 @@ async def no_longer_afk(client: Client, message: Message):
         await client.send_message(message.from_user.id, text)
         MENTIONED = []
 
-add_command_help(
-    "afk",
-    [
-        [".afk", "Activates AFK mode with reason as anything after .afk\nUsage: ```.afk <reason>```"],
-    ],
-)
