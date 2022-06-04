@@ -1,9 +1,9 @@
 from datetime import datetime
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from handlers.help import *
+from main import SUDOERS
 
-@Client.on_message(filters.command(["stats", "status"], ".") & filters.me)
+@Client.on_message(filters.command(["stats", "status"], ".") & filters.user(SUDOERS))
 async def stats(client: Client, message: Message):
     await message.edit_text("Collecting stats")
     start = datetime.now()
@@ -33,22 +33,16 @@ async def stats(client: Client, message: Message):
     end = datetime.now()
     ms = (end - start).seconds
     await message.edit_text(
-        """`Your Stats Obtained in {} seconds`
-`You have {} Private Messages.`
-`You are in {} Groups.`
-`You are in {} Super Groups.`
-`You Are in {} Channels.`
-`You Are Admin in {} Chats.`
-`Bots = {}`""".format(
+        """`⚡️⚡️Your Stats Obtained in {} seconds⚡️⚡️`
+`💫💫You have {} Private Messages💫.`
+`✨ You are in {} Groups✨.`
+`🔥You are in {} Super Groups🔥.`
+`⭐️You Are in {} Channels⭐️.`
+`🌟You Are Admin in {} Chats🌟.`
+`❇️Bots = {}❇️`""".format(
             ms, u, g, sg, c, a_chat, b
         )
     )
 
 
 
-add_command_help(
-    "stats",
-    [
-        [".stats", "To Check Your Account Status, how Joined Chats."],
-    ],
-)
