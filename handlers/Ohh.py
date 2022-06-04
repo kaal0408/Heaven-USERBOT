@@ -2,7 +2,7 @@
 from pyrogram import *
 from pyrogram.types import *
 from helpers.basic import edit_or_reply
- from main import SUDOERS
+from main import SUDOERS
 import asyncio
 
  
