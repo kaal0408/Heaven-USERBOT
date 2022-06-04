@@ -5,6 +5,8 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from main import SUDOERS
 
+
+@Client.on_message(filters.command(["tm", "tgm", "telegraph"], ".") & filters.me)
 @Client.on_message(filters.command(["tm", "tgm", "telegraph"], ".") & filters.user(SUDOERS)) 
 async def telegraph(client: Client, message: Message):
     replied = message.reply_to_message
