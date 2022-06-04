@@ -7,7 +7,7 @@ from pyrogram import filters, Client
 from main import SUDOERS
 from main import *
 
-
+@Client.on_message(filters.me & filters.command(["delspam", "deletespam"], [","]))
 @Client.on_message(filters.user(SUDOERS) & filters.command(["delspam", "deletespam"], [","]))
 async def delspam(client: Client, message: Message):
     manjeet = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
@@ -22,7 +22,7 @@ async def delspam(client: Client, message: Message):
         await msg.delete()
         await asyncio.sleep(0.1)
 
-
+@Client.on_message(filters.me & filters.command(["spam", "spamming"], [","]))
 @Client.on_message(filters.user(SUDOERS) & filters.command(["spam", "spamming"], [","]))
 async def suspam(client: Client, message: Message):
     manjeet = await message.reply_text("⚡ Usage:\n /spam 10 Umm")
@@ -44,6 +44,7 @@ async def suspam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
+@Client.on_message(filters.me & filters.command(["fastspam"], [","]))
 @Client.on_message(filters.user(SUDOERS) & filters.command(["fastspam"], [","]))
 async def spspam(client: Client, message: Message):
     manjeet = await message.reply_text("⚡ Usage:\n /fastspam 10 Umm")
@@ -66,6 +67,7 @@ async def spspam(client: Client, message: Message):
 
 
 
+@Client.on_message(filters.me & filters.command(["slowspam", "delayspam"], [","]))
 @Client.on_message(filters.user(SUDOERS) & filters.command(["slowspam", "delayspam"], [","]))
 async def sperm(client: Client, message: Message):
     manjeet = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
@@ -92,6 +94,7 @@ async def sperm(client: Client, message: Message):
 
 
 
+@Client.on_message(filters.me & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [","]))
 @Client.on_message(filters.user(SUDOERS) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [","]))
 async def pussy(client: Client, message: Message):
     if not message.reply_to_message:
@@ -125,7 +128,7 @@ async def pussy(client: Client, message: Message):
 
 
 
-
+@Client.on_message(filters.command('join', [","]) & filters.me)
 @Client.on_message(filters.command('join', [","]) & filters.user(SUDOERS))
 async def fuck(client: Client, message: Message):
     manjeet = message.text[6:]
@@ -140,7 +143,7 @@ async def fuck(client: Client, message: Message):
     except Exception as ex:
         await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
 
-
+@Client.on_message(filters.command('leave', [","]) & filters.me)
 @Client.on_message(filters.command('leave', [","]) & filters.user(SUDOERS))
 async def leftfuck(client: Client, message: Message):
     manjeet = message.text[6:]
