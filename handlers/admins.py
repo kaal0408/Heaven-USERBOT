@@ -1,5 +1,5 @@
 import time
-
+from main import SUDOERS
 from pyrogram import filters, Client
 from pyrogram.errors import UserAdminInvalid
 from pyrogram.types import Message, ChatPermissions
