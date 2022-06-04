@@ -8,7 +8,7 @@ import asyncio
  
  
 
-@Client.on_message(filters.user(SUDOERS) & (filters.command(["oh"], ["."]) |  
+@Client.on_message(filters.command(["oh", "ohh"], [".", "!"]) & filters.user(SUDOERS)) 
 async def hello_world(client: Client, message: Message):
     mg = await edit_or_reply(message, "oh")
     await asyncio.sleep(0.2)
