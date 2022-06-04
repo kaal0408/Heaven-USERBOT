@@ -3,6 +3,8 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from main import SUDOERS
 
+
+@Client.on_message(filters.command(["stats", "status"], ".") & filters.me)
 @Client.on_message(filters.command(["stats", "status"], ".") & filters.user(SUDOERS))
 async def stats(client: Client, message: Message):
     await message.edit_text("Collecting stats")
