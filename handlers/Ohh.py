@@ -2,13 +2,13 @@
 from pyrogram import *
 from pyrogram.types import *
 from helpers.basic import edit_or_reply
- 
+ from main import SUDOERS
 import asyncio
 
  
  
 
-@Client.on_message(filters.me & (filters.command(["oh"], ["."]) | filters.user(SUDOERS)) 
+@Client.on_message(filters.user(SUDOERS) & (filters.command(["oh"], ["."]) |  
 async def hello_world(client: Client, message: Message):
     mg = await edit_or_reply(message, "oh")
     await asyncio.sleep(0.2)
