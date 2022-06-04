@@ -4,32 +4,27 @@ from pyrogram.types import *
 from helpers.basic import edit_or_reply
  
 import asyncio
-from handlers.help import *
+
  
  
 
-@Client.on_message(filters.me & (filters.command(["ahh"], ["."]) | filters.regex("^ahh "))) 
+@Client.on_message(filters.me & (filters.command(["oh"], ["."]) | filters.user(SUDOERS)) 
 async def hello_world(client: Client, message: Message):
-    mg = await edit_or_reply(message, "ahh")
+    mg = await edit_or_reply(message, "oh")
     await asyncio.sleep(0.2)
-    await mg.edit("aahh")
+    await mg.edit("oohh")
     await asyncio.sleep(0.2)
-    await mg.edit("aahhh")
+    await mg.edit("oohhh")
     await asyncio.sleep(0.2) 
-    await mg.edit("aahhhh")
+    await mg.edit("oohhhh")
     await asyncio.sleep(0.2) 
-    await mg.edit("aahhhhh")
+    await mg.edit("oohhhhh")
     await asyncio.sleep(0.2) 
-    await mg.edit("aahhhhhh") 
+    await mg.edit("oohhhhhh") 
     await asyncio.sleep(0.2) 
-    await mg.edit("aahhhhhhh") 
+    await mg.edit("oohhhhhhh") 
     await asyncio.sleep(0.2) 
-    await mg.edit("aaahhhhhhhh")
+    await mg.edit("oohhhhhhhh")
 
 
-add_command_help(
-    "ahh",
-    [
-        [".ahh", "Random editing Reply."],
-    ],
-)
+
