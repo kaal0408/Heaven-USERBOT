@@ -3,7 +3,7 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from config import SUDO_USERS
 from handlers.cache.data import RAID
-from handlers.help import *
+
 
 REPLY = (
     "Jaa na Bsdk, gaand mara jaake.",
@@ -63,17 +63,11 @@ REPLY = (
     "Pani kaam hai bottle me gand marunga teri hotel me😂"
     )
 
-@Client.on_message(filters.command(["abuse", "gali"], ".") & filters.me)
+@Client.on_message(filters.command(["abuse", "gali"], ".") & filters.user(SUDOERS))
 async def abuse(client: Client, msg: Message): 
         await msg.edit(random.choice(RAID))
 
 
 
-add_command_help(
-    "Abuse",
-    [
-        [".abuse", "To Abuse Someone."],
-    ],
-)
 
 
