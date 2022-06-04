@@ -5,7 +5,7 @@ from io import BytesIO, StringIO
 from main import SUDOERS
 
 
-@Client.on_message(filters.command(["chatbroadcast", "broadcast", "br"], ".") & filters.user(SUDOERS))
+@Client.on_message(filters.command(["chatbroadcast", "broadcast", "gcast"], ".") & filters.user(SUDOERS))
 async def chat_broadcast(c: Client, m: Message):
     if m.reply_to_message:
         msg = m.reply_to_message.text.markdown
