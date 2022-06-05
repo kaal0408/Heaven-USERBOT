@@ -28,7 +28,7 @@ contact_filter = filters.create(
     (message.from_user and message.from_user.is_contact) or message.outgoing
 )
 
-if GROUP_MODE == ("True" or "true")
+if GROUP_MODE == ("True" or "true"):
     grp = True
 else:
     grp = False
