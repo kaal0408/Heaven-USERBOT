@@ -1,6 +1,7 @@
 import os
 from os import getenv
-
+from pyrogram import Client, filters
+from pytgcalls import PyTgCalls
 from dotenv import load_dotenv
 
 if os.path.exists("local.env"):
@@ -19,4 +20,21 @@ class config(object):
    ALIVE_IMG = getenv("ALIVE_IMG", "")
    DB_URL = getenv("DATABASE_URL", "")
    STRING_SESSION1 = getenv("STRING_SESSION1", "")
-   
+   GROUP_MODE = os.getenv("GROUP_MODE", "True")
+
+
+contact_filter = filters.create(
+    lambda _, __, message:
+    (message.from_user and message.from_user.is_contact) or message.outgoing
+)
+
+
+if GROUP_MODE == ("True" or "true"):
+    grp = True
+else:
+    grp = False
+
+GRPPLAY = grp
+bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="VCBot"))
+call_py = PyTgCalls(bot)
+
