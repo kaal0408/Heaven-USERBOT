@@ -28,12 +28,12 @@ contact_filter = filters.create(
     (message.from_user and message.from_user.is_contact) or message.outgoing
 )
 
-if GROUP_MODE:
-    GROUP_MODE = config.GROUP_MODE
- else: 
-    GROUP_MODE == ("True" or "true")
+ if GROUP_MODE:
+     GROUP_MODE = config.GROUP_MODE
+  else: 
+     GROUP_MODE == ("True" or "true")
     grp = True
-else:
+ else:
     grp = False
 
 GRPPLAY = grp
