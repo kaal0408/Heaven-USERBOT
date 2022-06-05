@@ -36,3 +36,10 @@ gpytranslate
 gtts
 tracemoepy
 textblob
+
+TgCrypto
+git+https://github.com/pyrogram/pyrogram@master
+py-tgcalls==0.8.1
+asyncio
+youtube-search-python
+youtube-dl
