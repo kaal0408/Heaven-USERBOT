@@ -35,6 +35,6 @@ else:
     grp = False
 
 GRPPLAY = grp
-bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="VCBot"))
+bot = Client(STRING_SESSION1, API_ID, API_HASH, plugins=dict(root="handlers"))
 call_py = PyTgCalls(bot)
 
