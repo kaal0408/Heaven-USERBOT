@@ -30,7 +30,8 @@ contact_filter = filters.create(
 
 if GROUP_MODE:
     GROUP_MODE = config.GROUP_MODE
-if GROUP_MODE == ("True" or "true"):
+else: 
+    GROUP_MODE == ("True" or "true"):
     grp = True
 else:
     grp = False
