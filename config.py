@@ -1,7 +1,6 @@
 import os
 from os import getenv
-from pyrogram import Client, filters
-from pytgcalls import PyTgCalls
+
 from dotenv import load_dotenv
 
 if os.path.exists("local.env"):
