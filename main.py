@@ -5,9 +5,7 @@ import requests
 import os
 import re
 import asyncio
-from pytgcalls import PyTgCalls
-from pytgcalls import idle as pyidle
-from config import bot1, call_py
+
 from datetime import datetime
 from config import config
 from config import *
