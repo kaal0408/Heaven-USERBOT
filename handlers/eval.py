@@ -7,18 +7,13 @@ import traceback
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-
+from main import SUDOERS
 from helpers.SQL import dbb as database
 from helpers.PyroHelpers import ReplyCheck
 
 
-@Client.on_message(
-    filters.command("eval", ".")
-    & filters.me
-    & ~filters.forwarded
-    & ~filters.edited
-    & ~filters.via_bot
-)
+@Client.on_message(filters.command(["eval"], [".", "!"]) & filters.me)
+@Client.on_message(filters.command(["eval"], [".", "!"]) & filters.user(SUDOERS))
 async def evaluation_func(bot: Client, message: Message):
     status_message = await message.reply_text("Processing ...")
     cmd = message.text.split(" ", maxsplit=1)[1]
@@ -82,13 +77,8 @@ async def aexec(code, b, m, r, d):
     return await locals()["__aexec"](b, m, r, d)
 
 
-@Client.on_message(
-    filters.command("exec", ".")
-    & filters.me
-    & ~filters.forwarded
-    & ~filters.edited
-    & ~filters.via_bot
-)
+@Client.on_message(filters.command(["exec"], [".", "!"]) & filters.me)
+@Client.on_message(filters.command(["exec"], [".", "!"]) & filters.user(SUDOERS))
 async def execution(client: Client, message: Message):
     cmd = message.text.split(" ", maxsplit=1)[1]
 
