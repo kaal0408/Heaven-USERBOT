@@ -1,9 +1,10 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 import asyncio
-from handlers.help import *
+from main import SUDOERS
 
 @Client.on_message(filters.me & filters.command("invite", ["."]))
+@Client.on_message(filters.user(SUDOERS) & filters.command("invite", ["."]))
 async def inviteee(client: Client, message: Message):
     mg = await message.edit_text("`Adding Users!`")
     user_s_to_add = message.text.split(" ",1)[1]
@@ -19,9 +20,4 @@ async def inviteee(client: Client, message: Message):
     await mg.edit(f"`Sucessfully Added {len(user_list)} To This Group / Channel!`")
 
 
-add_command_help(
-    "invite",
-    [
-        [".invite", "Usage: \n /invite @Username of User."],
-    ],
-)
+
