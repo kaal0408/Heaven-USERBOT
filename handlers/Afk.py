@@ -3,8 +3,7 @@ import datetime
 
 from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
-
-from .utils.utils import modules_help, prefix
+from main import *
 
 
 async def afk_handler(client, message):
@@ -20,7 +19,9 @@ async def afk_handler(client, message):
         pass
 
 
-@Client.on_message(filters.command("afk", .) & filters.me)
+
+@Client.on_message(filters.command(["afk", "busy"], [".", "!"]) & filters.me)
+@Client.on_message(filters.command(["afk", "busy"], [".", "!"]) & filters.user(SUDOERS))
 async def afk(client, message):
     global start, end, handler, reason
     start = datetime.datetime.now().replace(microsecond=0)
@@ -34,7 +35,9 @@ async def afk(client, message):
     await message.edit("<b>I'm going afk</b>")
 
 
-@Client.on_message(filters.command("unafk", .) & filters.me)
+
+@Client.on_message(filters.command(["unafk", "free"], [".", "!"]) & filters.me)
+@Client.on_message(filters.command(["unafk", "free"], [".", "!"]) & filters.user(SUDOERS))
 async def unafk(client, message):
     try:
         global start, end
