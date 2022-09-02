@@ -1,7 +1,10 @@
+from pyrogram import filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from main import *
+from pyrogram import Client as astro
+from main import ALIVE_PIC
+ 
 
- 
- 
-from . import * 
  
 def get_params(text): 
     return [ t for t in text.split() if t.startswith('-') ] 
