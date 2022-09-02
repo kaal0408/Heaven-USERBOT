@@ -1,6 +1,5 @@
 import asyncio
-import datetime
-
+from datetime import datetime
 from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
 from main import *
