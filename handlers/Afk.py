@@ -8,7 +8,7 @@ from main import *
 async def afk_handler(client, message):
     try:
         global start, end
-        end = datetime.datetime.now().replace(microsecond=0)
+        end = datetime.now().replace(microsecond=0)
         afk_time = end - start
         if message.from_user.is_bot is False:
             await message.reply_text(
@@ -23,7 +23,7 @@ async def afk_handler(client, message):
 @Client.on_message(filters.command(["afk", "busy"], [".", "!"]) & filters.user(SUDOERS))
 async def afk(client, message):
     global start, end, handler, reason
-    start = datetime.datetime.now().replace(microsecond=0)
+    start = datetime.now().replace(microsecond=0)
     handler = client.add_handler(
         MessageHandler(afk_handler, (filters.private & ~filters.me))
     )
@@ -40,7 +40,7 @@ async def afk(client, message):
 async def unafk(client, message):
     try:
         global start, end
-        end = datetime.datetime.now().replace(microsecond=0)
+        end = datetime.now().replace(microsecond=0)
         afk_time = end - start
         await message.edit(f"<b>I'm not AFK anymore.\nI was afk {afk_time}</b>")
         client.remove_handler(*handler)
